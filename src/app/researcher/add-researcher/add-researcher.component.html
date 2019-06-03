@@ -1,0 +1,49 @@
+<h3>Add Researcher</h3>
+<div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="researcher.name" name="name">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Designation</label>
+            <input type="text" class="form-control" id="designation" required [(ngModel)]="researcher.designation" name="designation">
+        </div>
+
+        
+        <div class="form-group">
+          <label for="name">Department</label>
+          <input type="text" class="form-control" id="department" required [(ngModel)]="researcher.department" name="department">
+        </div>
+
+        
+        <div class="form-group">
+          <label for="name">Faculty</label>
+          <input type="text" class="form-control" id="faculty" required [(ngModel)]="researcher.faculty" name="faculty">
+        </div>
+
+    
+        <div class="form-group">
+          <label for="name">University</label>
+          <input type="text" class="form-control" id="universirty" required [(ngModel)]="researcher.universirty" name="university">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Email</label>
+            <input type="text" class="form-control" id="email" required [(ngModel)]="researcher.email" name="email">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Phone no</label>
+            <input type="text" class="form-control" id="phone_no" required [(ngModel)]="researcher.phone_no" name="phone_no">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
+
+<div [hidden]="!submitted">
+    <h5>You submitted successfully!</h5>
+</div>

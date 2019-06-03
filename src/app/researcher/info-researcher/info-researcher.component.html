@@ -1,0 +1,34 @@
+<div *ngIf="researcher">
+    <div>
+        <label>Name: </label> {{researcher.name}}
+    </div>
+    <div>
+        <label>Designation: </label> {{researcher.designation}}
+    </div>
+    <div>
+        <label>Department: </label> {{researcher.department}}
+    </div>
+    <div>
+        <label>Faculty: </label> {{researcher.faculty}}
+    </div>
+    <div>
+        <label>University: </label> {{researcher.universirty}}
+    </div>
+    <div>
+        <label>Phone No: </label> {{researcher.phone_no}}
+    </div>
+    <div>
+        <label>Email : </label> {{researcher.email}}
+    </div>
+    <div>
+        <label>Options: </label> {{researcher.options}}
+    </div>
+
+    <!-- <span class="button is-small btn-primary" *ngIf='researcher.options' (click)='updateActive(false)'>Inactive</span>
+
+    <span class="button is-small btn-primary" *ngIf='!researcher.options' (click)='updateActive(true)'>Active</span> -->
+
+    <span class="button is-small btn-danger" (click)='deleteResearcher()'>Delete</span>
+
+    <hr/>
+</div>
