@@ -1,6 +1,7 @@
 {
   "/portfolio/researcher": {
-    "target": "http://localhost:8080",
+    "target": "http://localhost:8080/portfolio",
     "secure": false
   }
 }
+

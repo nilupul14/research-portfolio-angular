@@ -4,8 +4,8 @@ export class Researcher{
     designation : string;
     department : string;
     faculty : string;
-    universirty : string;
+    university : string;
     email : string;
-    phone_no : string;
+    phoneNo : string;
     options : boolean;
 }

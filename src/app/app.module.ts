@@ -7,13 +7,17 @@ import { AddResearcherComponent } from './researcher/add-researcher/add-research
 import { ListResearcherComponent } from './researcher/list-researcher/list-researcher.component';
 import { InfoResearcherComponent } from './researcher/info-researcher/info-researcher.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
+import { EditResearcherComponent } from './researcher/edit-researcher/edit-researcher.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AddResearcherComponent,
     ListResearcherComponent,
-    InfoResearcherComponent
+    InfoResearcherComponent,
+    NavbarComponent,
+    EditResearcherComponent
 
   ],
   imports: [

@@ -37,10 +37,20 @@ export class ListResearcherComponent implements OnInit {
         error => console.log(error));
   };
 
-  // deleteResearcher(researcher: Researcher): void {
-  //   this.researcherService.deleteResearcher(researcher.id)
-  //     .subscribe( data => {
-  //       this.researchers = this.researchers.(researcher);
-  //     })
-  // };
+  // update(){
+  //   this.researcherService.updateResearcher(id,value)
+  //   .subscribe( data => {
+  //     this.researchers = data;
+  //     this.router.navigate(['/researcherUpdate']);
+  //   });
+  // }
+  updateResearcher(id : number, value: any){
+    // this.researcherService.updateResearcher(researcher.id, researcher.value)
+    // .subscribe(data => {
+    //   this.researchers = this.researchers.(researcher);
+    // });
+    // this.researcherService.updateResearcher(researchers)
+    this.router.navigate(['/researcherUpdate']);
+  }
+
 }

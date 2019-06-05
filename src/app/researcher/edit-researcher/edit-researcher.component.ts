@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Researcher } from 'src/app/model/researcher';
-import { ResearcherService } from 'src/app/service/researcher.service';
 import { Router } from '@angular/router';
+import { ResearcherService } from 'src/app/service/researcher.service';
+import { Researcher } from 'src/app/model/researcher';
 
 @Component({
-  selector: 'app-add-researcher',
-  templateUrl: './add-researcher.component.html',
-  styleUrls: ['./add-researcher.component.css']
+  selector: 'app-edit-researcher',
+  templateUrl: './edit-researcher.component.html',
+  styleUrls: ['./edit-researcher.component.css']
 })
-export class AddResearcherComponent implements OnInit {
+export class EditResearcherComponent implements OnInit {
 
   researcher: Researcher = new Researcher();
   submitted = false;
@@ -23,12 +23,6 @@ export class AddResearcherComponent implements OnInit {
     this.researcher = new Researcher();
   }
 
-  // save(){
-  //   // this.researcherService.addResearcher(this.researcher)
-  //   //   .subscribe(data => console.log(data), error => console.log(error));
-  //   // this.researcher = new Researcher();
-
-  // }
   save(): void {
     this.researcherService.addResearcher(this.researcher)
         .subscribe( data => {

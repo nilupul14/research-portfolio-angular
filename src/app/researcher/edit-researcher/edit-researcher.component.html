@@ -1,33 +1,27 @@
-<style>
-
-</style>
-<h3 style="font-family: Verdana, Arial, Helvetica, sans-serif;">Add Researcher</h3>
-<div [hidden]="submitted" style="width: 500px; font-family: Lucida Console, Courier, monospace;">
+<h3 style="font-family: Verdana, Arial, Helvetica, sans-serif;">Edit Researcher</h3>
+<div [hidden]="submitted" style="width: 500px; font-family: Verdana, Arial, Helvetica, sans-serif;">
     <form (ngSubmit)="onSubmit()">
 
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" class="form-control" id="name" required [(ngModel)]="researcher.name" name="name">
+            <input type="text" class="form-control" id="name" required [(ngModel)]="researcher.name" name="name" placeholder="researcher.name">
         </div>
 
         <div class="form-group">
             <label for="designation">Designation</label>
             <input type="text" class="form-control" id="designation" required [(ngModel)]="researcher.designation" name="designation">
         </div>
-
-        
+      
         <div class="form-group">
           <label for="department">Department</label>
           <input type="text" class="form-control" id="department" required [(ngModel)]="researcher.department" name="department">
         </div>
-
-        
+    
         <div class="form-group">
           <label for="faculty">Faculty</label>
           <input type="text" class="form-control" id="faculty" required [(ngModel)]="researcher.faculty" name="faculty">
         </div>
-
-    
+ 
         <div class="form-group">
           <label for="university">University</label>
           <input type="text" class="form-control" id="university" required [(ngModel)]="researcher.university" name="university">
@@ -39,14 +33,14 @@
         </div>
 
         <div class="form-group">
-            <label for="phoneNo">Phone no</label>
+            <label for="phoneNo">Phone No</label>
             <input type="text" class="form-control" id="phoneNo" required [(ngModel)]="researcher.phoneNo" name="phoneNo">
         </div>
 
-        <button type="submit" class="btn btn-success">Submit</button>
+        <button type="submit" class="btn btn-success">Update</button>
     </form>
 </div>
 
 <div [hidden]="!submitted">
-    <h5>You submitted successfully!</h5>
+    <h5>You Updated successfully!</h5>
 </div>

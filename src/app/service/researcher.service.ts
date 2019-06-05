@@ -13,6 +13,7 @@ const httpOptions = {
 export class ResearcherService {
 
   private baseUrl = 'http://localhost:8080/portfolio';
+  setter: any;
 
   constructor(private http: HttpClient) { }
 
