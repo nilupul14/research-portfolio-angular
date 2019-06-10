@@ -1,34 +1,38 @@
-<div *ngIf="researcher">
-    <div>
-        <label>Name: </label> {{researcher.name}}
-    </div>
-    <div>
-        <label>Designation: </label> {{researcher.designation}}
-    </div>
-    <div>
-        <label>Department: </label> {{researcher.department}}
-    </div>
-    <div>
-        <label>Faculty: </label> {{researcher.faculty}}
-    </div>
-    <div>
-        <label>University: </label> {{researcher.university}}
-    </div>
-    <div>
-        <label>Phone No: </label> {{researcher.phoneNo}}
-    </div>
-    <div>
-        <label>Email : </label> {{researcher.email}}
-    </div>
-    <div>
-        <label>Actions: </label> {{researcher.options}}
-    </div>
+<h1>Researcher Details</h1>
+<hr>
+<div *ngIf="researchers">
+    <!-- <div *ngFor="let researcher of researcher.data"> -->
+        <div>
+            <label>Name: </label> {{researcher.name}}
+        </div>
+        <div>
+            <label>Designation: </label> {{researcher.designation}}
+        </div>
+        <div>
+            <label>Department: </label> {{researcher.department}}
+        </div>
+        <div>
+            <label>Faculty: </label> {{researcher.faculty}}
+        </div>
+        <div>
+            <label>University: </label> {{researcher.university}}
+        </div>
+        <div>
+            <label>Phone No: </label> {{researcher.phoneNo}}
+        </div>
+        <div>
+            <label>Email : </label> {{researcher.email}}
+        </div>
+        <!-- <div>
+            <label>Actions: </label> {{researcher.options}}
+        </div> -->
 
-    <!-- <span class="button is-small btn-primary" *ngIf='researcher.options' (click)='updateActive(false)'>Inactive</span> -->
+        <!-- <span class="button is-small btn-primary" *ngIf='researcher.options' (click)='updateActive(false)'>Inactive</span> -->
 
-    <!-- <span class="button is-small btn-primary" *ngIf='!researcher.options' (click)='updateActive(true)'>Active</span> -->
+        <!-- <span class="button is-small btn-primary" *ngIf='!researcher.options' (click)='updateActive(true)'>Active</span> -->
 
-    <span class="button is-small btn-danger" (click)='deleteResearcher()'>Delete</span>
+        <span class="button is-small btn-info" routerLink="/researcher">Go to Researcher Table</span>
 
-    <hr/>
+        <hr/>
+    <!-- </div> -->
 </div>

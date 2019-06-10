@@ -37,20 +37,23 @@ export class ListResearcherComponent implements OnInit {
         error => console.log(error));
   };
 
-  // update(){
-  //   this.researcherService.updateResearcher(id,value)
-  //   .subscribe( data => {
-  //     this.researchers = data;
-  //     this.router.navigate(['/researcherUpdate']);
-  //   });
-  // }
-  updateResearcher(id : number, value: any){
-    // this.researcherService.updateResearcher(researcher.id, researcher.value)
-    // .subscribe(data => {
-    //   this.researchers = this.researchers.(researcher);
-    // });
-    // this.researcherService.updateResearcher(researchers)
+  updateResearcher(researcher : Researcher){
+
+    localStorage.removeItem("editResearcherId");
+    localStorage.setItem("editResearcherId", researcher.id.toString());
     this.router.navigate(['/researcherUpdate']);
+  }
+
+  getResearcher(id: number){
+    // this.researcherService.getResearcher(id)
+    //   .subscribe(
+    //     data => {
+    //       console.log(data);
+    //       // this.reloadData();
+    //     },
+    //     error => console.log(error));
+
+    this.router.navigate(['/researcherInfo']);
   }
 
 }
