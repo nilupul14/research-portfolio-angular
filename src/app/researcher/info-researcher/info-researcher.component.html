@@ -1,38 +1,47 @@
+<style>
+label{
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkorange;
+}
+</style>
 <h1>Researcher Details</h1>
 <hr>
-<div *ngIf="researchers">
-    <!-- <div *ngFor="let researcher of researcher.data"> -->
+
+<ng-form [formGroup]="form">
+        <!-- <div *ngFor="let researcher of researcher"> -->
+            <!-- <div *ngIf="researcher"> -->
         <div>
-            <label>Name: </label> {{researcher.name}}
+            <label>Name: Paul</label> {{researchers.name}}
         </div>
         <div>
-            <label>Designation: </label> {{researcher.designation}}
+            <label>Designation: </label> {{researchers.designation}}
         </div>
         <div>
-            <label>Department: </label> {{researcher.department}}
+            <label>Department: </label> {{researchers.department}}
         </div>
         <div>
-            <label>Faculty: </label> {{researcher.faculty}}
+            <label>Faculty: </label> {{researchers.faculty}}
         </div>
         <div>
-            <label>University: </label> {{researcher.university}}
+            <label>University: </label> {{researchers.university}}
         </div>
         <div>
-            <label>Phone No: </label> {{researcher.phoneNo}}
+            <label>Phone No: </label> {{researchers.phoneNo}}
         </div>
         <div>
-            <label>Email : </label> {{researcher.email}}
+            <label>Email : </label> {{researchers.email}}
+        </div>
+        <div>
+            <label>Email : </label> pauluok@gmail.com
         </div>
         <!-- <div>
             <label>Actions: </label> {{researcher.options}}
         </div> -->
 
-        <!-- <span class="button is-small btn-primary" *ngIf='researcher.options' (click)='updateActive(false)'>Inactive</span> -->
-
-        <!-- <span class="button is-small btn-primary" *ngIf='!researcher.options' (click)='updateActive(true)'>Active</span> -->
-
         <span class="button is-small btn-info" routerLink="/researcher">Go to Researcher Table</span>
 
         <hr/>
-    <!-- </div> -->
-</div>
+    <!-- </div>         -->
+</ng-form>
+

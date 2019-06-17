@@ -38,11 +38,11 @@ export class ListAuthorComponent implements OnInit {
 
   updateAuthor(author : Author){
     localStorage.removeItem("editAuthorId");
-    localStorage.setItem("editAuthorId", author.id.toString());
+    localStorage.setItem("editAuthorId", author.authorId.toString());
     this.router.navigate(['/authorUpdate']);
   }
 
-  getResearcher(id: number){
+  getAuthor(id: number){
     this.router.navigate(['/authorInfo']);
   }
 }

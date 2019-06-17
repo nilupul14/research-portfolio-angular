@@ -4,6 +4,7 @@ import { ResearcherService } from 'src/app/service/researcher.service';
 import { ListResearcherComponent } from '../list-researcher/list-researcher.component';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-info-researcher',
@@ -12,26 +13,35 @@ import { Observable } from 'rxjs';
 })
 export class InfoResearcherComponent implements OnInit {
 
-  @Input() researcher: Researcher;
-  researchers : Observable<Researcher[]>;
-
+  // @Input() researcher: Researcher;
+  // researchers : Observable<Researcher[]>;
+  researchers: Researcher = new Researcher();
+  form: FormGroup;
   constructor(private researcherService: ResearcherService, private router: Router) { }
 
   ngOnInit() {
 
+    let id = localStorage.getItem("viewResearcherId");
+    this.researcherService.getResearcher(+id)
+    .subscribe( data => {
+      this.form.setValue(data);
+    });
   }
 
-
-   getResearcher(id: number){
-    this.researcherService.getResearcher(id)
-      .subscribe(
-        data => {
-          // this.researcher.setValue(data);
-          console.log(data);
-        },
-        error => console.log(error));
-
-    this.router.navigate(['/researcherInfo']);
+  newResearcher(): void{
+    // this.submitted = false;
+    this.researchers = new Researcher();
   }
 
+  //  reloadData(){
+  //   this.researcherService.getResearcher(id)
+  //     .subscribe(
+  //       data => {
+  //         this.researchers = data;
+  //         console.log(data);
+  //       },
+  //       error => console.log(error));
+
+  //   this.router.navigate(['/researcher']);
+  // }
 }

@@ -20,7 +20,6 @@ export class EditResearcherComponent implements OnInit {
 
   ngOnInit() {
     // Build and Validate Reactive form
-
     let id = localStorage.getItem("editResearcherId");
     if(!id) {
       alert("Invalid action.")
@@ -37,6 +36,7 @@ export class EditResearcherComponent implements OnInit {
       email: ['', Validators.required],
       phoneNo: ['', Validators.required],
     });
+    
     this.researcherService.getResearcher(+id)
       .subscribe( data => {
         this.form.setValue(data);

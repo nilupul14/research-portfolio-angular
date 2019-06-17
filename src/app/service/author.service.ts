@@ -13,7 +13,7 @@ export class AuthorService {
   constructor(private http: HttpClient) { }
 
   getAuthor(id: number) : Observable<Object>{
-    return this.http.get(`${this.baseUrl}/researcherInfo/${id}`);
+    return this.http.get(`${this.baseUrl}/authorInfo/${id}`);
   }
 
   getAllAuthors(): Observable<any>{
@@ -27,7 +27,7 @@ export class AuthorService {
   }
 
   updateAuthor(author : Author): Observable<Object>{  //id: number, value: any
-    return this.http.put(`${this.baseUrl}/authorUpdate/${author.id}`, author);//`${this.baseUrl}/researcherUpdate/${id}`, value
+    return this.http.put(`${this.baseUrl}/authorUpdate/${author.authorId}`, author);//`${this.baseUrl}/researcherUpdate/${id}`, value
   }
 
   deleteAuthor(id: number): Observable<any>{

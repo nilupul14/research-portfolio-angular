@@ -47,7 +47,7 @@
                          <td>
                              <!-- <button (click)="getAuthor(author.id)" class="btn btn-success btn-sm" routerLink="/authorInfo/{{author.authorId}}"><i class="material-icons" data-toggle="tooltip" title="View">&#xE85D;</i></button>  &#xE85D | view &#xE8EF -->
                          <button (click)="updateAuthor(author)" class="btn btn-info btn-sm"  style="margin-left:10px;" routerLink="/authorUpdate/{{author.authorId}}"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></button>
-                         <button (click)="deleteAuthor(author.id)" class="btn btn-danger btn-sm"  style="margin-left:10px;"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></button></td>
+                         <button (click)="deleteAuthor(author.authorId)" class="btn btn-danger btn-sm"  style="margin-left:10px;"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></button></td>
                  </tr>
              </tbody>
          </table>

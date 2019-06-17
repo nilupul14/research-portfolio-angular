@@ -1,3 +1,50 @@
-<p>
-  add-author works!
-</p>
+<!--  -->
+  <h3 style="font-family: Verdana, Arial, Helvetica, sans-serif;">Add Author</h3>
+  <div [hidden]="submitted" style="width: 500px; font-family: Lucida Console, Courier, monospace;">
+      <form (ngSubmit)="onSubmit()">
+  
+          <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" required [(ngModel)]="author.name" name="name">
+          </div>
+  
+          <div class="form-group">
+              <label for="designation">Designation</label>
+              <input type="text" class="form-control" id="designation" required [(ngModel)]="author.designation" name="designation">
+          </div>
+  
+          
+          <div class="form-group">
+            <label for="department">Department</label>
+            <input type="text" class="form-control" id="department" required [(ngModel)]="author.department" name="department">
+          </div>
+  
+          
+          <div class="form-group">
+            <label for="faculty">Faculty</label>
+            <input type="text" class="form-control" id="faculty" required [(ngModel)]="author.faculty" name="faculty">
+          </div>
+  
+      
+          <div class="form-group">
+            <label for="university">University</label>
+            <input type="text" class="form-control" id="university" required [(ngModel)]="author.university" name="university">
+          </div>
+  
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="text" class="form-control" id="email" required [(ngModel)]="author.email" name="email">
+          </div>
+  
+          <div class="form-group">
+              <label for="phoneNo">Phone no</label>
+              <input type="text" class="form-control" id="phoneNo" required [(ngModel)]="author.phoneNo" name="phoneNo">
+          </div>
+  
+          <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+  </div>
+  
+  <div [hidden]="!submitted">
+      <h5>You submitted successfully!</h5>
+  </div>

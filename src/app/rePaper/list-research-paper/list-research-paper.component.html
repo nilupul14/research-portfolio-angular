@@ -1,3 +1,47 @@
-<p>
-  list-research-paper works!
-</p>
+<style>
+    h4{color: white; text-align:center; font-weight:bold; font-family: monospace; font-size: 26px;}
+    th{text-align: center; font-size: 16px; font-family: Lucida Console, Courier, monospace;}
+    td{text-align: center;   vertical-align: inherit; font-size: 15px; font-family: monospace, Arial, Helvetica, sans-serif;}
+   addbtn{border-radius: 8px;   position: fixed;
+     right: 0; }
+   </style>
+   <div class="panel panel-default">
+     <div class="panel-heading" style=background-color:#999595>
+       <div class="container">
+           <div class=row>
+               <div class="col-sm-9">
+                   <h4>Information of Research Papers </h4>
+               </div>
+               <div class="col-sm-2">
+                   <button type="button" class="btn addbtn btn-warning btn-lg" routerLink="/researchPaperCreate" style="border-radius: 8px;"><i class="fa fa-plus" aria-hidden="true"></i> Add Research Paper </button>
+               </div>    
+           </div>
+       </div>    
+         <!-- <h4 style=color:aliceblue ><button type="button" class="btn btn-outline-warning btn-lg " href="/createResearcher">Add New Researcher</button> Information of Researchers </h4> -->
+     </div>
+     <div class="panel-body">
+         <table class="table table-striped table-bordered" >
+             <thead>
+                 <tr>
+                     <th>#</th>
+                     <th>Name</th>
+                     <th>Funding</th>
+                     <th>Publication</th>
+                     <th>Actions</th>
+                 </tr>
+             </thead>
+             <tbody>
+                 <tr *ngFor="let paper of researchPaper">
+                     <td>{{paper.researchPaperId}}</td>
+                     <td>{{paper.name}}</td>
+                     <td>{{paper.funding}}</td>
+                     <td>{{paper.publication}}</td>
+                         <td>
+                             <!-- <button (click)="getAuthor(author.id)" class="btn btn-success btn-sm" routerLink="/authorInfo/{{author.authorId}}"><i class="material-icons" data-toggle="tooltip" title="View">&#xE85D;</i></button>  &#xE85D | view &#xE8EF -->
+                         <button (click)="updateResearchPaper(paper)" class="btn btn-info btn-sm"  style="margin-left:10px;" routerLink="/researchPaperUpdate/{{paper.researchPaperId}}"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></button>
+                         <button (click)="deleteResearchPaper(paper.researchPaperId)" class="btn btn-danger btn-sm"  style="margin-left:10px;"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></button></td>
+                 </tr>
+             </tbody>
+         </table>
+     </div>
+   </div>

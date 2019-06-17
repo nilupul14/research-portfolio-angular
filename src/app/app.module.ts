@@ -18,6 +18,10 @@ import { EditFundComponent } from './fund/edit-fund/edit-fund.component';
 import { AddResearchPaperComponent } from './rePaper/add-research-paper/add-research-paper.component';
 import { ListResearchPaperComponent } from './rePaper/list-research-paper/list-research-paper.component';
 import { EditResearchPaperComponent } from './rePaper/edit-research-paper/edit-research-paper.component';
+import { HomeComponent } from './home/home.component';
+import { ListPublicationComponent } from './publication/list-publication/list-publication.component';
+import { AddPublicationComponent } from './publication/add-publication/add-publication.component';
+import { EditPublicationComponent } from './publication/edit-publication/edit-publication.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,11 @@ import { EditResearchPaperComponent } from './rePaper/edit-research-paper/edit-r
     EditFundComponent,
     AddResearchPaperComponent,
     ListResearchPaperComponent,
-    EditResearchPaperComponent
+    EditResearchPaperComponent,
+    HomeComponent,
+    ListPublicationComponent,
+    AddPublicationComponent,
+    EditPublicationComponent
 
   ],
   imports: [
